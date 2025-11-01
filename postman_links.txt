@@ -1,0 +1,25 @@
+Enlaces para probar los microservicios con Postman:
+
+1. Microservicio de Consulta - Obtener todos los personajes:
+GET http://localhost:3001/consultar-personajes
+
+2. Microservicio de Consulta - Obtener un personaje por ID:
+GET http://localhost:3001/consultar-personaje/1
+
+3. Microservicio de Inserción - Insertar un nuevo personaje:
+POST http://localhost:3002/insertar-personaje
+Headers: Content-Type: application/json
+Body (raw JSON):
+{
+  "nombre": "Nuevo Personaje",
+  "edad": 20,
+  "altura": 1.8,
+  "constelacion": "Nueva Constelación",
+  "urlImagen": "https://ejemplo.com/imagen.jpg"
+}
+
+4. Documentación Swagger Unificada:
+http://localhost:3000/api-docs
+
+Nota: Los servidores deben estar corriendo localmente para probar estos enlaces.
+Para despliegue online, reemplaza localhost con la URL del servidor desplegado.
