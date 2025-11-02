@@ -4,7 +4,7 @@ Conjunto de microservicios para consultar e insertar datos de personajes de Caba
 
 ## Características
 
-- **Base de datos**: SQLite (fácil despliegue local)
+- **Base de datos**: MySQL (compatible con Railway y otros servicios cloud)
 - **Mínimo 12 personajes**: Incluye 13 personajes sembrados
 - **Campos**: nombre, edad, altura, constelación, URL de imagen
 - **Microservicios**:
@@ -22,7 +22,9 @@ Conjunto de microservicios para consultar e insertar datos de personajes de Caba
    npm install
    ```
 
-3. Configura variables de entorno (opcional, usa .env.example como guía)
+3. Configura la base de datos MySQL:
+   - Crea una base de datos llamada `caballeros_zodiaco`
+   - Copia `.env.example` a `.env` y configura tus credenciales MySQL
 
 4. Siembra la base de datos con personajes iniciales:
    ```bash
@@ -87,5 +89,5 @@ Para desplegar online (e.g., en Heroku, Railway, etc.):
 - Node.js
 - Express
 - Sequelize
-- SQLite (desarrollo)
+- MySQL (producción)
 - Swagger (documentación)
