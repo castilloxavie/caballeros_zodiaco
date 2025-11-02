@@ -98,9 +98,14 @@ const personajes = [
 async function sembrarPersonajes() {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ force: true }); // Esto borra y recrea las tablas
-    await Personaje.bulkCreate(personajes);
-    console.log('Personajes sembrados exitosamente.');
+    await sequelize.sync(); // Crea las tablas si no existen, sin borrar
+    const count = await Personaje.count();
+    if (count === 0) {
+      await Personaje.bulkCreate(personajes);
+      console.log('Personajes sembrados exitosamente.');
+    } else {
+      console.log('Los personajes ya están sembrados.');
+    }
   } catch (error) {
     console.error('Error al sembrar personajes:', error);
   } finally {

@@ -4,6 +4,9 @@ const swaggerUi = require('swagger-ui-express');
 const specsUnified = require('../swagger/swaggerUnified');
 require('dotenv').config();
 
+// Ejecutar seeder al iniciar el servidor (solo si no hay datos)
+require('../seeders/seed');
+
 class ServidorUnificado {
   constructor() {
     this.app = express();
