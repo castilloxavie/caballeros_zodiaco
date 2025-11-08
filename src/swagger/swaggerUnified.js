@@ -10,11 +10,11 @@ const opcionesSwaggerUnified = {
     },
     servers: [
       {
-        url: 'http://localhost:3001',
+        url: 'https://caballeros-zodiaco.onrender.com',
         description: 'Microservicio de Consulta',
       },
       {
-        url: 'http://localhost:3002',
+        url: 'https://caballeros-zodiaco-insertar.onrender.com',
         description: 'Microservicio de Inserción',
       },
     ],

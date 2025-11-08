@@ -10,7 +10,7 @@ const opcionesSwaggerQuery = {
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PUERTO_SERVIDOR_CONSULTA || 3001}`,
+        url: `https://caballeros-zodiaco.onrender.com`,
       },
     ],
   },

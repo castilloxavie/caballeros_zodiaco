@@ -10,7 +10,7 @@ const opcionesSwaggerInsert = {
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PUERTO_SERVIDOR_INSERCION || 3002}`,
+        url: `https://caballeros-zodiaco-insertar.onrender.com`,
       },
     ],
   },
